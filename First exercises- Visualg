@@ -1,0 +1,32 @@
+Algoritmo "Operações"
+
+Var
+
+   x,y: real
+   problema: caractere
+
+Inicio
+
+   escreva("Digite Um Número: ")
+   leia(x)
+   escreva("Digite Outro Número: ")
+   leia(y)
+   escreval ("Oque deseja fazer?")
+   escreval ("Multiplicar(1), subtrair(2), somar(3) ou dividir(4)?")
+   escreval ("Obs: Escolha o número que está integrado a opção desejada")
+        leia (problema)
+
+   se problema = "3" ENTÃO
+      escreval ("A soma dos numeros digitados é: ",x+y)
+   fimSe
+   se problema = "2" ENTÃO
+      escreval ("A subtração dos numeros digitado é: ",x-y)
+   fimSe
+   se problema = "1" ENTÃO
+      escreval(" A multiplicação dos numeros digitados é: ",x*y)
+   fimSe
+   se problema = "4" ENTÃO
+      escreval("A divisão dos numeros digitados é: ", x/y)
+   fimse
+
+Fimalgoritmo
