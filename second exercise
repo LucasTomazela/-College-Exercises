@@ -1,0 +1,47 @@
+Algoritmo "Exercício sobre Decisão"
+
+Var
+
+   cargo : caractere
+   g, v: real
+
+Inicio
+
+   escreval("Qual o seu cargo na empresa?")
+   escreval("A) Gerente")
+   escreval("B) Vendedor")
+   escreva("Qual letra condiz com seu cargo?")
+   leia (cargo)
+
+   se (cargo = "A") então
+      escreval("Este programa é para identificar se você(Gerente) irá receber")
+      escreval("um bônus salárial ou não de acordo com o valor em vendas")
+      escreval("durante um mês.")
+      escreva("Digite o valor em vendas atingida: R$")
+      leia (g)
+   fimse
+
+   se (g > 100000) então
+      escreval("Parabéns!!!")
+      escreval("Você atingiu o valor em vendas necessária, será adicionado um")
+      escreva("bônus de R$ 350,00 ao seu salário.")
+   senao
+      escreval("Infelizmente você não atingiu o valor necessário para receber")
+      escreval("um bônus este mês")
+      escreva("Tente novamente")
+   fimse
+
+   se (cargo = "B") então
+      escreval("Este programa é para identificar o valor em comissão que")
+      escreval("será acrescida em seu salário este mês.")
+      escreva("Digite o valor em vendas atingida: R$")
+      leia (v)
+   fimse
+
+   se v > 5000 então
+      escreva("Em seu salário será adicionado R$", v * 5/100)
+   senão
+      escreva("Em seu salário será adicionado R$", v * 2/100)
+   fimse
+
+Fimalgoritmo
