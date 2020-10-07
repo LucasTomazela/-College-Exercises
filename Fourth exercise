@@ -1,0 +1,43 @@
+Algoritmo "Salário líquido após pagar inss e imposto de renda"
+
+Var
+   sb, Inss, ir, bc, sl, pgi, bi : real
+   // sb = salário bruto; ir = imposto de renda; bc = base de cálculo;
+   // sl = salario líquido; pgi = sb*Inss; bi = bc*ir;
+Inicio
+
+   escreva("Digite seu sálario: ")
+   leia (sb)
+
+   se sb <= 1751.81 entao
+      Inss <- 8/100
+   fimse
+   se (sb>1751.81)e(sb<2919.72) então
+      Inss <- 9/100
+   fimse
+   se sb > 2919.72 então
+      Inss <- 11/100
+   fimse
+   pgi <- sb*Inss
+   escreval("O valor de INSS a ser pago é de: R$", pgi)
+
+   bc  <- sb-sb*Inss
+   se (bc>1903.99)e(bc<2826.65) entao
+      ir <- 7.5/100
+   fimse
+   se (bc>2826.66)e(bc<3751.05) entao
+      ir <- 15/100
+   fimse
+   se (bc>3751.06)e(bc<4664.68) entao
+      ir <- 22.5/100
+   fimse
+   se bc>4664.68 entao
+      ir <- 27.5/100
+   fimse
+   bi <- bc*ir
+   escreval("O valor a ser pago no imposto de renda é de: R$", bi)
+
+   sl <- sb-sb*Inss-bc*ir
+   escreva("Seu salário líquido é de R$", sl)
+   
+Fimalgoritmo
